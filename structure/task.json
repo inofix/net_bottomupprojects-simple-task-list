@@ -1,0 +1,228 @@
+{
+    "availableLanguageIds": [
+        "en_US",
+        "de_DE"
+    ],
+    "defaultLanguageId": "en_US",
+    "fields": [
+        {
+            "label": {
+                "en_US": "Assigned To",
+                "de_DE": "Verantwortliche/r"
+            },
+            "predefinedValue": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "owner",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_US": "Status",
+                "de_DE": "Status"
+            },
+            "options": [
+                {
+                    "value": "open",
+                    "label": {
+                        "en_US": "open",
+                        "de_DE": "offen"
+                    }
+                },
+                {
+                    "value": "done",
+                    "label": {
+                        "en_US": "done",
+                        "de_DE": "erledigt"
+                    }
+                },
+                {
+                    "value": "worksforme",
+                    "label": {
+                        "en_US": "works for me",
+                        "de_DE": "soweit ok"
+                    }
+                },
+                {
+                    "value": "duplicate",
+                    "label": {
+                        "en_US": "duplicate",
+                        "de_DE": "Duplikat"
+                    }
+                },
+                {
+                    "value": "invalid",
+                    "label": {
+                        "en_US": "invalid",
+                        "de_DE": "ungültig"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_US": [
+                    "open"
+                ],
+                "de_DE": [
+                    "open"
+                ]
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "radio"
+        },
+        {
+            "label": {
+                "en_US": "Description",
+                "de_DE": "Beschreibung"
+            },
+            "predefinedValue": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "string",
+            "indexType": "text",
+            "localizable": true,
+            "name": "description",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "textarea"
+        },
+        {
+            "label": {
+                "en_US": "% Complete",
+                "de_DE": "% erledigt"
+            },
+            "predefinedValue": {
+                "en_US": "0",
+                "de_DE": "0"
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "integer",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "percentComplete",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-integer"
+        },
+        {
+            "label": {
+                "en_US": "Severity",
+                "de_DE": "Dringlichkeit"
+            },
+            "options": [
+                {
+                    "value": "blocker",
+                    "label": {
+                        "en_US": "blocker",
+                        "de_DE": "blockiert"
+                    }
+                },
+                {
+                    "value": "critical",
+                    "label": {
+                        "en_US": "critical",
+                        "de_DE": "kritisch"
+                    }
+                },
+                {
+                    "value": "major",
+                    "label": {
+                        "en_US": "major",
+                        "de_DE": "ernst"
+                    }
+                },
+                {
+                    "value": "minor",
+                    "label": {
+                        "en_US": "minor",
+                        "de_DE": "gering"
+                    }
+                },
+                {
+                    "value": "trivial",
+                    "label": {
+                        "en_US": "trivial",
+                        "de_DE": "trivial"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_US": [
+                    "value 1"
+                ],
+                "de_DE": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "severity",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        }
+    ]
+}
