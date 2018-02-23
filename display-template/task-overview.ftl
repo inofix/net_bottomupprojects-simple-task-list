@@ -15,9 +15,9 @@ please commit your changes there.
         <#assign percentComplete = doc.valueOf("//dynamic-element[@name='percentComplete']/dynamic-content/text()")?number />
 
         <#if severity == 'blocker'>
-            <#assign severitycolor = "rgba(220, 20, 60, 0.6)">
+            <#assign severitycolor = "rgba(220, 20, 60, 0.9)">
         <#elseif severity == 'critical'>
-            <#assign severitycolor = "rgba(255, 0, 0, 0.6)">
+            <#assign severitycolor = "rgba(255, 0, 0, 0.7)">
         <#elseif severity == 'major'>
             <#assign severitycolor = "rgba(255, 126, 0, 0.6)">
         <#elseif severity == 'minor'>

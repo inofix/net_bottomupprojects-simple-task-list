@@ -11,16 +11,16 @@
                 "de_DE": "Verantwortliche/r"
             },
             "predefinedValue": {
-                "en_US": "",
-                "de_DE": ""
+                "en_US": "???",
+                "de_DE": "???"
             },
             "style": {
                 "en_US": "",
                 "de_DE": ""
             },
             "tip": {
-                "en_US": "",
-                "de_DE": ""
+                "en_US": "Usually tasks should be simple enough so that exactly one person can take the responsibility for it.",
+                "de_DE": "Tasks sollten so genau formuliert sein, dass genau eine Person die Verantwortung zu tragen vermag."
             },
             "dataType": "string",
             "indexType": "keyword",
@@ -102,6 +102,75 @@
         },
         {
             "label": {
+                "en_US": "Severity",
+                "de_DE": "Dringlichkeit"
+            },
+            "options": [
+                {
+                    "value": "blocker",
+                    "label": {
+                        "en_US": "blocker",
+                        "de_DE": "blockiert"
+                    }
+                },
+                {
+                    "value": "critical",
+                    "label": {
+                        "en_US": "critical",
+                        "de_DE": "kritisch"
+                    }
+                },
+                {
+                    "value": "major",
+                    "label": {
+                        "en_US": "major",
+                        "de_DE": "ernst"
+                    }
+                },
+                {
+                    "value": "minor",
+                    "label": {
+                        "en_US": "minor",
+                        "de_DE": "gering"
+                    }
+                },
+                {
+                    "value": "trivial",
+                    "label": {
+                        "en_US": "trivial",
+                        "de_DE": "trivial"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_US": [
+                    "major"
+                ],
+                "de_DE": [
+                    "major"
+                ]
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "e.g.: blocker: to be done today; critical: to be done this week; major: to be done this month; minor/trivial: to be done time given",
+                "de_DE": "z.B.: blockiert: Wird heute erledigt; kritisch: Wird diese Woche gemacht; ernst: Wird in diesem Monat erledigt; gering/trivial: Wann immer Zeit da ist;"
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "severity",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
                 "en_US": "Description",
                 "de_DE": "Beschreibung"
             },
@@ -154,75 +223,6 @@
             "required": false,
             "showLabel": true,
             "type": "ddm-integer"
-        },
-        {
-            "label": {
-                "en_US": "Severity",
-                "de_DE": "Dringlichkeit"
-            },
-            "options": [
-                {
-                    "value": "blocker",
-                    "label": {
-                        "en_US": "blocker",
-                        "de_DE": "blockiert"
-                    }
-                },
-                {
-                    "value": "critical",
-                    "label": {
-                        "en_US": "critical",
-                        "de_DE": "kritisch"
-                    }
-                },
-                {
-                    "value": "major",
-                    "label": {
-                        "en_US": "major",
-                        "de_DE": "ernst"
-                    }
-                },
-                {
-                    "value": "minor",
-                    "label": {
-                        "en_US": "minor",
-                        "de_DE": "gering"
-                    }
-                },
-                {
-                    "value": "trivial",
-                    "label": {
-                        "en_US": "trivial",
-                        "de_DE": "trivial"
-                    }
-                }
-            ],
-            "predefinedValue": {
-                "en_US": [
-                    "value 1"
-                ],
-                "de_DE": [
-                    ""
-                ]
-            },
-            "style": {
-                "en_US": "",
-                "de_DE": ""
-            },
-            "tip": {
-                "en_US": "",
-                "de_DE": ""
-            },
-            "dataType": "string",
-            "indexType": "keyword",
-            "localizable": true,
-            "multiple": false,
-            "name": "severity",
-            "readOnly": false,
-            "repeatable": false,
-            "required": false,
-            "showLabel": true,
-            "type": "select"
         }
     ]
 }
