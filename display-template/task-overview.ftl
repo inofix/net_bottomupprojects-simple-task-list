@@ -5,6 +5,7 @@ please commit your changes there.
 -->
 <#-- TODO: isolate the style elements -->
 
+<hr/>
 <#if entries?has_content>
 	<#list entries as curEntry>
         <#assign title = curEntry.getTitle(locale) />
@@ -53,6 +54,6 @@ please commit your changes there.
                 </div>
             </div>
         </div>
-        <div style='height: 8px;'>
+        <hr/>
 	</#list>
 </#if>
