@@ -46,7 +46,9 @@ please commit your changes there.
     <div class="bar" style="width: 100%; height: 8px; background-color: ${severitycolor};">
         <div class="progress" style="width: ${pComplete}%; height: 7px; background-color: rgba(0, 255, 0, 0.8)"></div>
     </div>
-    <p>
-        ${description.getData()}
-    </p>
+<#if description.getSiblings()?has_content>
+	<#list description.getSiblings() as cur_description>
+        <p>${cur_description.getData()}</p>
+	</#list>
+</#if>
 </div>

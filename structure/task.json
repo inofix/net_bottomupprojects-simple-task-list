@@ -191,7 +191,7 @@
             "localizable": true,
             "name": "description",
             "readOnly": false,
-            "repeatable": false,
+            "repeatable": true,
             "required": false,
             "showLabel": true,
             "type": "textarea"

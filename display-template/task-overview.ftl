@@ -3,11 +3,16 @@ Any changes here will be overwritten by 'template/task.ftl' at
 https://github.com/inofix/net_bottomupprojects-simple-task-list.git
 please commit your changes there.
 -->
+<#-- TODO: isolate the style elements -->
 
+<hr/>
 <#if entries?has_content>
 	<#list entries as curEntry>
-        <#assign viewURL = assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, curEntry) />
+        <#assign title = curEntry.getTitle(locale) />
+        <#assign summary = curEntry.getSummary(locale, true) />
+        <#assign modifiedDate = curEntry.getModifiedDate()?date?string('yyyy-MM-dd') />
 
+        <#assign viewURL = assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, curEntry) />
         <#assign doc = saxReaderUtil.read(curEntry.getAssetRenderer().getArticle().getContent()) />
         <#assign owner = doc.valueOf("//dynamic-element[@name='owner']/dynamic-content/text()") />
         <#assign severity = doc.valueOf("//dynamic-element[@name='severity']/dynamic-content/text()") />
@@ -37,8 +42,8 @@ please commit your changes there.
         </#if>
 
         <div class='task'>
-            <a href="${viewURL}">${curEntry.getTitle(locale)}</a>
-            (${owner})
+            <a href="${viewURL}">${title}</a> (${owner}) [${modifiedDate}]
+            <div>${summary}</div>
         </div>
         <div class='bar' style='width: 100%; height: 5px; background-color: ${severitycolor};'>
             <div class='progress' style='width: ${percentComplete}%; height: 4px; background-color: rgba(126, 255, 126, 0.8);'>
@@ -49,5 +54,6 @@ please commit your changes there.
                 </div>
             </div>
         </div>
+        <hr/>
 	</#list>
 </#if>
