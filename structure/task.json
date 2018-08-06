@@ -7,6 +7,102 @@
     "fields": [
         {
             "label": {
+                "en_US": "Description",
+                "de_DE": "Beschreibung"
+            },
+            "predefinedValue": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "string",
+            "indexType": "text",
+            "localizable": true,
+            "name": "description",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "textarea"
+        },
+        {
+            "label": {
+                "en_US": "Severity",
+                "de_DE": "Dringlichkeit"
+            },
+            "options": [
+                {
+                    "value": "blocker",
+                    "label": {
+                        "en_US": "blocker",
+                        "de_DE": "blockiert"
+                    }
+                },
+                {
+                    "value": "critical",
+                    "label": {
+                        "en_US": "critical",
+                        "de_DE": "kritisch"
+                    }
+                },
+                {
+                    "value": "major",
+                    "label": {
+                        "en_US": "major",
+                        "de_DE": "ernst"
+                    }
+                },
+                {
+                    "value": "minor",
+                    "label": {
+                        "en_US": "minor",
+                        "de_DE": "gering"
+                    }
+                },
+                {
+                    "value": "trivial",
+                    "label": {
+                        "en_US": "trivial",
+                        "de_DE": "trivial"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_US": [
+                    "major"
+                ],
+                "de_DE": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "e.g.: blocker: to be done today; critical: to be done this week; major: to be done this month; minor/trivial: to be done time given",
+                "de_DE": "z.B.: blockiert: Wird heute erledigt; kritisch: Wird diese Woche gemacht; ernst: Wird in diesem Monat erledigt; gering/trivial: Wann immer Zeit da ist;"
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "severity",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
                 "en_US": "Assigned To",
                 "de_DE": "Verantwortliche/r"
             },
@@ -102,102 +198,6 @@
         },
         {
             "label": {
-                "en_US": "Severity",
-                "de_DE": "Dringlichkeit"
-            },
-            "options": [
-                {
-                    "value": "blocker",
-                    "label": {
-                        "en_US": "blocker",
-                        "de_DE": "blockiert"
-                    }
-                },
-                {
-                    "value": "critical",
-                    "label": {
-                        "en_US": "critical",
-                        "de_DE": "kritisch"
-                    }
-                },
-                {
-                    "value": "major",
-                    "label": {
-                        "en_US": "major",
-                        "de_DE": "ernst"
-                    }
-                },
-                {
-                    "value": "minor",
-                    "label": {
-                        "en_US": "minor",
-                        "de_DE": "gering"
-                    }
-                },
-                {
-                    "value": "trivial",
-                    "label": {
-                        "en_US": "trivial",
-                        "de_DE": "trivial"
-                    }
-                }
-            ],
-            "predefinedValue": {
-                "en_US": [
-                    "major"
-                ],
-                "de_DE": [
-                    "major"
-                ]
-            },
-            "style": {
-                "en_US": "",
-                "de_DE": ""
-            },
-            "tip": {
-                "en_US": "e.g.: blocker: to be done today; critical: to be done this week; major: to be done this month; minor/trivial: to be done time given",
-                "de_DE": "z.B.: blockiert: Wird heute erledigt; kritisch: Wird diese Woche gemacht; ernst: Wird in diesem Monat erledigt; gering/trivial: Wann immer Zeit da ist;"
-            },
-            "dataType": "string",
-            "indexType": "keyword",
-            "localizable": true,
-            "multiple": false,
-            "name": "severity",
-            "readOnly": false,
-            "repeatable": false,
-            "required": false,
-            "showLabel": true,
-            "type": "select"
-        },
-        {
-            "label": {
-                "en_US": "Description",
-                "de_DE": "Beschreibung"
-            },
-            "predefinedValue": {
-                "en_US": "",
-                "de_DE": ""
-            },
-            "style": {
-                "en_US": "",
-                "de_DE": ""
-            },
-            "tip": {
-                "en_US": "",
-                "de_DE": ""
-            },
-            "dataType": "string",
-            "indexType": "text",
-            "localizable": true,
-            "name": "description",
-            "readOnly": false,
-            "repeatable": true,
-            "required": false,
-            "showLabel": true,
-            "type": "textarea"
-        },
-        {
-            "label": {
                 "en_US": "% Complete",
                 "de_DE": "% erledigt"
             },
@@ -223,6 +223,90 @@
             "required": false,
             "showLabel": true,
             "type": "ddm-integer"
+        },
+        {
+            "label": {
+                "en_US": "Start Date",
+                "de_DE": "Due Date"
+            },
+            "predefinedValue": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "",
+            "localizable": true,
+            "name": "StartDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_US": "Due Date",
+                "de_DE": "Due Date"
+            },
+            "predefinedValue": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "",
+            "localizable": true,
+            "name": "DueDateif30",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_US": "Depends on Ticket",
+                "de_DE": "Depends on Ticket"
+            },
+            "predefinedValue": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "style": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "tip": {
+                "en_US": "",
+                "de_DE": ""
+            },
+            "dataType": "journal-article",
+            "fieldNamespace": "ddm",
+            "indexType": "",
+            "localizable": true,
+            "name": "dependsOn",
+            "readOnly": false,
+            "repeatable": true,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-journal-article"
         }
     ]
 }
